@@ -97,7 +97,7 @@
 	
 	                        String price = rs.getString("price");
 	
-	                        String summary = rs.getString("product_summary");
+	                        String summary = rs.getString("summary");
 	                        
 	                        String image_name = rs.getString("image_name");
 
