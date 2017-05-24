@@ -44,8 +44,8 @@
                 <p  class="grid_4" style="text-align: right; font-size: 72px;">500</p>
                 <p class="grid_7">
                 It seems that the page you've requested has been undergone through several errors 
-                We request you to inform this to our administrator if you wish to like by contacting us
-                please check the requested web page again or try again Later!! 
+                Testing to see if this flows through the build pipe
+                -Kris
                 <br/> We are extremely sorry about the inconvenience for not finding the requested webpage, Please Do co-operate!! We wish you best
                 </p>
             </div>
