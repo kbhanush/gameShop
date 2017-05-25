@@ -103,8 +103,6 @@ public class registerServlet extends HttpServlet {
         EmailValidator validator = new EmailValidator();
         boolean isEmailValid = validator.validate(email);
 
-        String ipAdd = request.getRemoteAddr();
-
         PrintWriter out = response.getWriter();
 
         HttpSession userSession = request.getSession();
@@ -117,8 +115,8 @@ public class registerServlet extends HttpServlet {
                     if (pass.length() > 7) {
                         if (pass.equals(passAgain)) {
                             // then the user is registered and a session is 
-
-                            String sql = "insert into webapp.user_auth values ( SYS_GUID(), ?, ? ,CURRENT_TIMESTAMP)";
+                            
+                            String sql = "insert into webapp.user_auth values (seq1.NEXTVAL, ?, ? ,CURRENT_TIMESTAMP)";
 
                             PreparedStatement psmt = c.prepareStatement(sql);
 
