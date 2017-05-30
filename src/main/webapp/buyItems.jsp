@@ -78,7 +78,10 @@
                         </div>
                         <div class="grid_2">
                             City
-                        </div>                     
+                        </div>  
+                        <div class="grid_5">
+                            <input  type="text" value="SF Bay Area" disabled/>
+                        </div>                        
                         <div class="clear"></div><br/>
                         <div class="grid_5" >
                             <input  type="submit" id="greenBtn" value="Add Details"/>
