@@ -78,35 +78,7 @@
                         </div>
                         <div class="grid_2">
                             City
-                        </div>
-                        <div class="grid_5">
-                            <input list="locations" name="location">
-                            <datalist id="locations">
-
-
-                            <%
-                                String locSQL = "select loc_id,loc_name from DeliveryLocations";
-
-                                DBCSConnection dbcs_conn = DBCSConnectionManager.getConnection();
-                                Connection conn = dbcs_conn.getConnection();
-
-                                PreparedStatement stmt =conn.prepareStatement(locSQL);
-                                ResultSet rs = stmt.executeQuery();
-
-                                while(rs.next()){
-                                    String locID = rs.getString(1);
-                                    String locName = rs.getString(2);
-                                    %>
-                                <option value="<%=locID%>"><%=locName%></option>
-                                    <%
-
-                                }
-
-                            %>
-
-                            </datalist>
-
-                        </div>
+                        </div>                     
                         <div class="clear"></div><br/>
                         <div class="grid_5" >
                             <input  type="submit" id="greenBtn" value="Add Details"/>
