@@ -19,7 +19,7 @@
                                 <label>Email</label>
                             </td>
                             <td>
-                                <label><input type="text" name="email" placeholder="john_lee@xyz.com" /><br/></label>
+                                <label><input type="text" name="email" placeholder="jane_doe@aol.com" /><br/></label>
                             </td>
                         </tr>
                         <tr>
@@ -57,7 +57,7 @@
                                 <label>Email</label>
                             </td>
                             <td>
-                                <label><input type="text" name="email" placeholder="john_lee@xyz.com" /><br/></label>
+                                <label><input type="text" name="email" placeholder="jane_doe@aol.com" /><br/></label>
                             </td>
                         </tr>
                         <tr>

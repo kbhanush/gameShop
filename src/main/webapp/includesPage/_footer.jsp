@@ -11,18 +11,18 @@
             </div>
             <div class="grid_3">
                 <ul>
-                    <li><strong>SaiKiran</strong></li>
-                    <li><a href="contact-support.jsp">Contact Us</a></li>
-                    <li><a href="contact-support.jsp">About Us</a></li>
-                    <li><a href="faq.jsp">Careers</a></li>
+                    <li><strong>Game Shop</strong></li>
+                    <li><a>Contact Us</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Careers</a></li>
                 </ul>
             </div>
             <div class="grid_3">
                 <ul>
                     <li><strong>Misc</strong></li>
                     <li><a href="index.jsp">Home</a></li>
-                    <li><a href="faq.jsp">Affiliate</a></li>
-                    <li><a href="http://www.facebook.html">Facebook</a></li>
+                    <li><a>Affiliate</a></li>
+                    <li><a>Facebook</a></li>
                 </ul>
             </div>
             <div class="grid_5">
@@ -31,8 +31,8 @@
             </div>
         </div>
         <div id="clear"></div>
-        <div class="grid_16">	
+        <!-- <div class="grid_16">	
             <p>Copyrights &copy; 2016 Demo GameStore</p>
-    </div>
+    </div> -->
 </div>
 </div>

@@ -115,8 +115,8 @@
                         </ul>
                     </div>
                     <div class="adv">
-                        <h2><br/>This is The Header of an Advertisement</h2>
-                        <p>We offer Advertisement display here </p>
+                        <h2><br/>Advertise your product here</h2>
+                        <p>Sponsor ads will appear in this section</p>
                     </div>
                 </div>
             </div>
