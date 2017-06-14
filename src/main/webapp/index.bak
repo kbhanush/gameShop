@@ -5,7 +5,7 @@
 <%@ page import="database.DBCSConnectionManager" %>
 <!DOCTYPE HTML>
 <html>
-    <head> 
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>CI Demo Game Store</title>
         <!-- Default Stylesheets -->
@@ -47,39 +47,46 @@
                     <ul id="sliderContent">		
                         <!-- Duplicate this code for each image -->				
                         <li class="sliderImage" style="display: none; ">
-                            <img src="images/banner/paladins.png" width="900" height="300" /> 
+                            <img src="images/banner/b1.png" width="900" height="300" /> 
                             <span class="top" style="display: none; ">
-                                <strong>Paladins: Champions of the Realms</strong>	
-                                <br>Paladins is a First Person Shooter game developed by Hi-Rez Studios, creators of the MOBA SMITE. The game is rooted in a colorful sci-fi fantasy setting featuring Champions, playable characters that have their own unique fire-function and abilities. 
+                                <strong>Fountain Pens...</strong>	
+                                <br>From the International and Indian markets, we have the variety of the High Class fountain 
+                                pens. Available now for you to get your hands on.
                             </span>
                         </li>  
                         <li class="sliderImage" style="display: none; ">
-                            <img src="images/banner/halo5.png" width="900" height="300" /> 
+                            <img src="images/banner/b2.png" width="900" height="300" /> 
                             <span class="top" style="display: none; ">
-                                <strong>Halo 5: Guardians</strong>				
-                                <br>Halo 5: Guardians is a first-person shooter game developed by 343 Industries and published by Microsoft Studios in October 2015. It is the latest installment of the popular Halo series, and its story continues from the events of Halo 4.
+                                <strong>Books, Diaries...</strong>				
+                                <br>Text Books, Single Lines, Double Lines, Red 'n Blue Lines, Fullscape Books
+                                Drawing Books, and all the paper you want to write all throughout to learn 
+                                Available now at your doorsteps* 
                             </span>
                         </li>  
                         <li class="sliderImage" style="display: none; ">
-                            <img src="images/banner/ride.png" width="900" height="300" /> 
+                            <img src="images/banner/b5.png" width="900" height="300" /> 
                             <span class="top" style="display: none; ">
-                                <strong>Ride</strong>				
-                                <br>You’re likely looking at this and groaning at yet another game that takes delight in the sordid filth of motorsport. Of course, if you’re reading this then that’s probably what gets you revved up
+                                <strong>Kids Colors...</strong>				
+                                <br>Collection of Non-Toxic childrens colors available
+                                Let your child learn the art of painting at an early age 
+                                by having his hands on the colors available here... 
                             </span>
                         </li>  
                         <li class="sliderImage" style="display: none; ">
-                            <img src="images/banner/motoGP15.jpg" width="900" height="300" /> 
+                            <img src="images/banner/b7.jpg" width="900" height="300" /> 
                             <span class="top" style="display: none; ">
-                                <strong>MOTOGP 15</strong>				
-                                <br>MotoGP 15 is the third instalment in the motorcycle racing series "dedicated to the most adrenalin-charged championship in the world". It's coming to Xbox 360, Xbox One, PS3 and PS4 from June 24th. Sébastien Loeb Rally Evo, meanwhile, is "an all-new off-road racing game experience" in which you can "drive the best rally cars in the best rallies and off-road events around the world." It's out on Xbox One and PS4 later this year.
+                                <strong>Graphic Novels...</strong>				
+                                <br>The most amazing titles that you always wanted to get your hands onn.. 
+                                Now you have the opportunity to have them all in your personal library.
+                                International as well as Indian titles of many authors available
                             </span>
                         </li>   
                         <li class="sliderImage" style="display: none; ">
-                            <img src="images/banner/GofW4.png" width="900" height="300" /> 
+                            <img src="images/banner/b6.png" width="900" height="300" /> 
                             <span class="top" style="display: none; ">
-                                <strong>GEARS OF WAR 4</strong>				
-                                <br>Prepare for the biggest ever update in the history of Gears of War 4  with the Rise of the Horde available now!  
-
+                                <strong>Color World...</strong>				
+                                <br>A vast variety of different sets of colors including Oil-Pastels,
+                                Pencil Colors, Poster Colors, Acrylic Colors and many more...
                             </span>
                         </li>   
                         <div class="clear sliderImage"></div>  
