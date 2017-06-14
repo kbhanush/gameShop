@@ -2,7 +2,7 @@
 <div id = "topWrapper">
     <div class="container_16">
         <div class="grid_16">
-            <div class="grid_6"> <a id="logo" href="index.jsp">Demo Game Kart</a>
+            <div class="grid_6"> <a id="logo" href="index.jsp">Game Shop</a>
             </div>
             <div class="grid_6" id="top">
                 <ul>
@@ -32,7 +32,7 @@
                                 <label>Email</label>
                             </td>
                             <td>
-                                <label><input type="email" name="email" placeholder="john_lee@xyz.com" required/><br/></label>
+                                <label><input type="email" name="email" placeholder="jane_doe@aol.com" required/><br/></label>
                             </td>
                         </tr>
                         <tr>
@@ -70,7 +70,7 @@
                                 <label>Email</label>
                             </td>
                             <td>
-                                <label><input type="email" name="emailReg" placeholder="john_lee@xyz.com" required/><br/></label>
+                                <label><input type="email" name="emailReg" placeholder="jane_doe@aol.com" required/><br/></label>
                             </td>
                         </tr>
                         <tr>

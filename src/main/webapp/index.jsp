@@ -68,7 +68,7 @@
                             </span>
                         </li>  
                         <li class="sliderImage" style="display: none; ">
-                            <img src="images/banner/motoGP15.jpg" width="900" height="300" /> 
+                            <img src="images/banner/motoGP15.png" width="900" height="300" /> 
                             <span class="top" style="display: none; ">
                                 <strong>MOTOGP 15</strong>				
                                 <br>MotoGP 15 is the third instalment in the motorcycle racing series "dedicated to the most adrenalin-charged championship in the world". It's coming to Xbox 360, Xbox One, PS3 and PS4 from June 24th. Sébastien Loeb Rally Evo, meanwhile, is "an all-new off-road racing game experience" in which you can "drive the best rally cars in the best rallies and off-road events around the world." It's out on Xbox One and PS4 later this year.
