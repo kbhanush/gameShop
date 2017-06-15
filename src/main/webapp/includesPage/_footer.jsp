@@ -11,7 +11,7 @@
             </div>
             <div class="grid_3">
                 <ul>
-                    <li><strong>Game Shop</strong></li>
+                    <li><strong>GameShop</strong></li>
                     <li><a>Contact Us</a></li>
                     <li><a>About Us</a></li>
                     <li><a>Careers</a></li>
@@ -31,8 +31,6 @@
             </div>
         </div>
         <div id="clear"></div>
-        <!-- <div class="grid_16">	
-            <p>Copyrights &copy; 2016 Demo GameStore</p>
-    </div> -->
+        
 </div>
 </div>

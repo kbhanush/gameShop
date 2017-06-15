@@ -7,7 +7,7 @@
 <html>
     <head> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>CI Demo Game Store</title>
+        <title>CI Demo GameShop</title>
         <!-- Default Stylesheets -->
         <%@include file="includesPage/_stylesheets.jsp" %>
 
