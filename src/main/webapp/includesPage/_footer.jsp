@@ -4,9 +4,9 @@
             <div class="grid_3">
                 <ul>
                     <li><strong>Help</strong></li>
-                    <li><a href="faq.jsp">Payments</a></li>
-                    <li><a href="faq.jsp">Shipping</a></li>
-                    <li><a href="faq.jsp">Cancellation &amp; Returns</a></li>
+                    <li><a>Payments</a></li>
+                    <li><a>Shipping</a></li>
+                    <li><a>Cancellation &amp; Returns</a></li>
                 </ul>
             </div>
             <div class="grid_3">

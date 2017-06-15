@@ -36,7 +36,7 @@
    <div id = "topWrapper">
         <div class="container_16">
                 <div class="grid_16">
-                    <div class="grid_6"> <a id="logo" href="index.jsp">Demo Game Kart</a>
+                    <div class="grid_6"> <a id="logo" href="index.jsp">GameShop</a>
                     </div>
                         <div class="grid_9" id="top">
                             <ul>
