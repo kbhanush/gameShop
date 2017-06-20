@@ -144,7 +144,7 @@
                     <password>${db.pass}</password>
                 </configuration>
  
-        </plugin> --> --> 
+        </plugin> --> 
 <!-- End flywaydb -->
         </plugins>
     </build>
