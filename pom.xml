@@ -124,12 +124,12 @@
             </plugin>
 <!-- download and configure maven plugin for flywaydb
         -->
-        <plugin>
+      <!-- <!--    <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>4.2.0</version>
                 <dependencies>
-                    <!-- specify the dependent JDBC driver here -->
+                    <!-- specify the dependent JDBC driver here 
                     <dependency>
                         <groupId>com.oracle.jdbc</groupId>
                         <artifactId>ojdbc7</artifactId>
@@ -144,7 +144,7 @@
                     <password>${db.pass}</password>
                 </configuration>
  
-        </plugin>
+        </plugin> --> --> 
 <!-- End flywaydb -->
         </plugins>
     </build>
