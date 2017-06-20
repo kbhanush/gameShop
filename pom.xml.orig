@@ -84,30 +84,7 @@
 
                 </configuration>
             </plugin>
-            <!-- download and configure maven plugin for flywaydb
-        -->
-        <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>4.2.0</version>
-                <dependencies>
-                    <!-- specify the dependent JDBC driver here -->
-                    <dependency>
-                        <groupId>com.oracle.jdbc</groupId>
-                        <artifactId>ojdbc7</artifactId>
-                        <version>12.1.0.2</version>
-                    </dependency>
-                </dependencies>
- 
-                <configuration>
-                    <driver>oracle.jdbc.driver.OracleDriver</driver>
-                    <url>jdbc:oracle:thin:@//${db.ip}/${db.name}</url>
-                    <username>${db.user}</username>
-                    <password>${db.pass}</password>
-                </configuration>
- 
-</plugin>
-<!-- End flywaydb -->
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sql-maven-plugin</artifactId>
