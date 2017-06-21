@@ -1,5 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project 
+    xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.oraceldbpm</groupId>
     <artifactId>ECommerceCIDemo</artifactId>
@@ -11,15 +12,11 @@
         <repository>
             <id>codehaus-mule-repo</id>
             <name>codehaus-mule-repo</name>
-            <url>
-                https://repository-master.mulesoft.org/nexus/content/groups/public/
-            </url>
+            <url>                https://repository-master.mulesoft.org/nexus/content/groups/public/            </url>
             <layout>default</layout>
         </repository>
     </repositories>
-
     <dependencies>
-
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet.servlet-api</artifactId>
@@ -30,16 +27,12 @@
             <artifactId>javax.servlet.jsp-api</artifactId>
             <version>2.1</version>
         </dependency>
-
         <dependency>
             <groupId>com.oracle.jdbc</groupId>
             <artifactId>ojdbc7</artifactId>
             <version>12.1.0.2</version>
         </dependency>
-
-
     </dependencies>
-
     <properties>
         <databaseIP>${db.ip}</databaseIP>
         <databaseName>${db.name}</databaseName>
@@ -47,7 +40,6 @@
         <databasePassword>${db.pass}</databasePassword>
         <databaseEdition>${db.edition}</databaseEdition>
     </properties>
-
     <build>
         <finalName>CIDemo</finalName>
         <plugins>
@@ -75,16 +67,12 @@
                     <target>1.5</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.19.1</version>
-                <configuration>
-
-                </configuration>
+                <configuration></configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>sql-maven-plugin</artifactId>
@@ -97,15 +85,12 @@
                         <version>12.1.0.2</version>
                     </dependency>
                 </dependencies>
-
                 <configuration>
                     <driver>oracle.jdbc.driver.OracleDriver</driver>
                     <url>jdbc:oracle:thin:@//${db.ip}/${db.name}</url>
                     <username>${db.user}</username>
                     <password>${db.pass}</password>
                 </configuration>
-
-
                 <executions>
                     <execution>
                         <id>default-cli</id>
@@ -122,7 +107,27 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <!-- download and configure maven plugin for flywaydb -->
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>4.2.0</version>
+                <dependencies>
+                    <!-- specify the dependent JDBC driver here -->
+                    <dependency>
+                        <groupId>com.oracle.jdbc</groupId>
+                        <artifactId>ojdbc7</artifactId>
+                        <version>12.1.0.2</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <driver>oracle.jdbc.driver.OracleDriver</driver>
+                    <url>jdbc:oracle:thin:@//${db.ip}/${db.name}</url>
+                    <username>${db.user}</username>
+                    <password>${db.pass}</password>
+                </configuration>
+            </plugin>
+            <!-- End flywaydb -->
         </plugins>
     </build>
 </project>
