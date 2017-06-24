@@ -125,6 +125,14 @@
                     <url>jdbc:oracle:thin:@//${db.ip}/${db.name}</url>
                     <username>${db.user}</username>
                     <password>${db.pass}</password>
+                    <table>flyway_schema</table>
+                    <locations>
+                        <location>/src/sql</location>
+                    </locations>
+                    <schemas>
+                        <schema>webapp</schema>
+                    </schemas>
+                    <sqlMigrationPrefix>DB_</sqlMigrationPrefix>
                 </configuration>
             </plugin>
             <!-- End flywaydb -->
