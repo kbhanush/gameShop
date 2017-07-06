@@ -128,7 +128,7 @@
                     <password>webapp</password>
                     <table>flyway_schema</table>
                     <locations>
-                        <location>/src/sql</location>
+                        <location>filesystem:src/sql</location>
                     </locations>
                     <schemas>
                         <schema>webapp</schema>
