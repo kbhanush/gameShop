@@ -1,16 +1,16 @@
 --------------------------------------------------------
 --  File created - Wednesday-June-14-2017   
 --------------------------------------------------------
-DROP TABLE "ADMINISTRATORS"; 
-DROP TABLE "CATEGORY";
-DROP TABLE "EXPENSES";
-DROP TABLE "IMAGES";
-DROP TABLE "ORDER_DETAILS";
-DROP TABLE "PRODUCTS";
-DROP TABLE "USER_AUTH";
-DROP SEQUENCE "SEQ1";
-DROP SEQUENCE "USER_SEQ";
-DROP PROCEDURE "ADD_ORDER";
+-- DROP TABLE "ADMINISTRATORS"; 
+-- DROP TABLE "CATEGORY";
+-- DROP TABLE "EXPENSES";
+-- DROP TABLE "IMAGES";
+-- DROP TABLE "ORDER_DETAILS";
+-- DROP TABLE "PRODUCTS";
+-- DROP TABLE "USER_AUTH";
+-- DROP SEQUENCE "SEQ1";
+-- DROP SEQUENCE "USER_SEQ";
+-- DROP PROCEDURE "ADD_ORDER";
 --------------------------------------------------------
 --  DDL for Sequence SEQ1
 --------------------------------------------------------
