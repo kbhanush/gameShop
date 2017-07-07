@@ -128,12 +128,13 @@
                     <password>webapp</password>
                     <table>flyway_schema</table>
                     <locations>
-                        <location>src/sql</location>
+                        <location>filesystem:src/sql</location>
                     </locations>
                     <schemas>
-                        <schema>webapp</schema>
+                        <schema>gameshop1</schema>
                     </schemas>
-                    <sqlMigrationPrefix>DB_</sqlMigrationPrefix>
+                    <sqlMigrationPrefix>V_</sqlMigrationPrefix>
+                    <sqlMigrationSeparator>__</sqlMigrationSeparator>
                 </configuration>
             </plugin>
             <!-- End flywaydb -->

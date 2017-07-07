@@ -1,0 +1,1 @@
+create table t1 (t2 varchar2(1));
