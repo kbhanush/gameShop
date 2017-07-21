@@ -49,4 +49,5 @@ nbactions.xml
 ..gitignore.un~
 .gitignore~
 .extract/
+.werker.yml.un~
 
