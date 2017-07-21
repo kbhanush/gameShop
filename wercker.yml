@@ -31,4 +31,13 @@ build:
           mvn install:install-file -DgroupId=javax.servlet -DartifactId=javax.servlet.servlet-api -Dversion=2.5 -Dpackaging=jar -Dfile=javax.servlet.javax.servlet-api.jar
           mvn install:install-file -DgroupId=javax.servlet.jsp -DartifactId=javax.servlet.jsp-api -Dversion=2.1 -Dpackaging=jar -Dfile=javax.servlet.jsp.javax.servlet.jsp-api.jar
           mvn clean package
-
+deploy:
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        tag: development
+        cmd: java -jar target/CIDemo.jar -httpPort=5000"
+        ports: "5000"
+        repository: wbleonard/gamerentals
+        registry: https://registry.hub.docker.com
