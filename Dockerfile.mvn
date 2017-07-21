@@ -1,0 +1,25 @@
+# The base image from which we are building
+FROM maven:latest
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+
+# Set the app directory as the active directory (like cd)
+WORKDIR /usr/src/app
+
+# Get the source
+RUN git clone https://github.com/OracleNATD/gamerentals.com-jcs.git
+
+# Set the node-api-container as the active directory
+WORKDIR /usr/src/app/gamerentals.com-jcs
+
+# Install app dependencies
+# The Maven docker image defines a volume for the .m2 folder, which means the mvn downloaded jars are not committed to the container during image creation. Therefore, these required jars are not available 
+# for the mvn clean install. 
+RUN mvn install:install-file -DgroupId=com.oracle.jdbc -DartifactId=ojdbc7 -Dversion=12.1.0.2 -Dpackaging=jar -Dfile=ojdbc7.jar
+RUN mvn install:install-file -DgroupId=javax.servlet -DartifactId=javax.servlet.servlet-api -Dversion=2.5 -Dpackaging=jar -Dfile=javax.servlet.javax.servlet-api.jar
+RUN mvn install:install-file -DgroupId=javax.servlet.jsp -DartifactId=javax.servlet.jsp-api -Dversion=2.1 -Dpackaging=jar -Dfile=javax.servlet.jsp.javax.servlet.jsp-api.jar
+RUN mvn clean install
+
+EXPOSE 5000 
+CMD ["java", "-jar", "target/CIDemo.jar", "-httpPort=5000"]
