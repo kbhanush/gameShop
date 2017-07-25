@@ -1,6 +1,6 @@
 
-alter table order_details
-drop constraint fk_loc;
+--alter table order_details
+--drop constraint fk_loc;
 
 --drop table webapp.DeliveryLocations;
 
