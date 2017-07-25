@@ -26,7 +26,7 @@ add constraint fk_loc
   REFERENCES DeliveryLocations(loc_id);
 
 
-create or replace PROCEDURE  add_order( user_id IN RAW, user_realname IN VARCHAR2, user_address IN VARCHAR2, user_phone In NUMBER, user_email IN VARCHAR2, order_price IN NUMBER, loc_id IN NUMBER)
+create or replace PROCEDURE  add_order( user_id IN NUMBER, user_realname IN VARCHAR2, user_address IN VARCHAR2, user_phone In NUMBER, user_email IN VARCHAR2, order_price IN NUMBER, loc_id IN NUMBER)
 IS
 BEGIN
   INSERT INTO order_details(order_id, user_id, status, shippers_name, address, MOBILE_NUMBER,SHIPPERS_EMAIL,ORDERED_ON,TOTAL_ORDER_PRICE, ORDER_LOC_ID) VALUES(
