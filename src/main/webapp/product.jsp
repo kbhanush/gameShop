@@ -48,8 +48,8 @@
             Statement st = con.createStatement();
 
 
-            String getProductQuery = "select * from webapp.products p "+
-            		" inner join webapp.images i "+
+            String getProductQuery = "select * from products p "+
+            		" inner join images i "+
             		" using (product_name) "+
             		" where product_id="+id+ " and i.isThumbnail = 1";
             ResultSet rs = st.executeQuery(getProductQuery);

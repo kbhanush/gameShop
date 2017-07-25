@@ -116,7 +116,7 @@ public class registerServlet extends HttpServlet {
                         if (pass.equals(passAgain)) {
                             // then the user is registered and a session is 
                             
-                            String sql = "insert into webapp.user_auth values (seq1.NEXTVAL, ?, ? ,CURRENT_TIMESTAMP)";
+                            String sql = "insert into user_auth values (seq1.NEXTVAL, ?, ? ,CURRENT_TIMESTAMP)";
 
                             PreparedStatement psmt = c.prepareStatement(sql);
 

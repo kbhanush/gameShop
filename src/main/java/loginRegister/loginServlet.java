@@ -104,7 +104,7 @@ public class loginServlet extends HttpServlet {
             out.println("email " + email + " pass " + pass);
             DBCSConnection con = DBCSConnectionManager.getConnection(getServletContext());
             Connection c = con.getConnection();
-            String sqlGetUsers = "SELECT  email, pass FROM  webapp.user_auth ";
+            String sqlGetUsers = "SELECT  email, pass FROM  user_auth ";
 
             PreparedStatement st = c.prepareStatement(sqlGetUsers);
 
