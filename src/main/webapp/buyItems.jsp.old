@@ -76,12 +76,12 @@
                         </div>  
                         
                         <%-- DBDevOps: Comment for enhancement --%>
-                        <!-- <div class="grid_5">
+                        <div class="grid_5">
                             <input  type="text" value="SF Bay Area" disabled/>
-                        </div> -->  
+                        </div>  
                         
-                        <!-- DBDevOps: Uncomment for enhancement -->
-                        
+                        <%-- DBDevOps: Uncomment for enhancement -->
+                        <%--
                         <div class="grid_5">
                             <input list="locations" name="location">
                             <datalist id="locations">
@@ -110,7 +110,7 @@
                             </datalist>
 
                         </div>    
-                        
+                        --%>
                         
                         <div class="clear"></div><br/>
                         <div class="grid_5" >
