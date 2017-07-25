@@ -1,8 +1,4 @@
-<%-- 
-    Document   : contact-support
-    Created on : 14 Dec, 2012, 12:38:53 AM
-    Author     : chirag
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

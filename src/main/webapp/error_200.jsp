@@ -1,8 +1,4 @@
-<%-- 
-    Document   : error_404
-    Created on : 10 Dec, 2012, 2:34:20 AM
-    Author     : chirag
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
