@@ -128,7 +128,7 @@
                         <location>filesystem:src/sql</location>
                     </locations>
                     <schemas>
-                        <schema>WEBAPP</schema>
+                        <schema>WEBAPP2</schema>
                     </schemas>
                     <sqlMigrationPrefix>V_</sqlMigrationPrefix>
                     <sqlMigrationSeparator>__</sqlMigrationSeparator>
