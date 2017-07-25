@@ -8,7 +8,7 @@
 create table DeliveryLocations(
   loc_id number(2) PRIMARY KEY,
   loc_name varchar2(50) NOT NULL
-) tablespace "USERS";
+) ;
 
 
 INSERT INTO "DELIVERYLOCATIONS" (LOC_ID, LOC_NAME) VALUES ('1', 'SF Bay Area');
