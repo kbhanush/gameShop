@@ -40,10 +40,8 @@
                 </h1><hr/><br/>
                 <p  class="grid_4" style="text-align: right; font-size: 52px;">403</p>
                 <p class="grid_7">
-                It seems that the page you've requested has not been given privileged permissions for you to use
-                This activity may be reported in the server logs for future use
-                Kindly please provide permitted URL 
-                <br/> We are extremely sorry about the inconvenience for not finding the requested webpage, Please Do co-operate!! We wish you best
+                You are not authorized to view this page. Please contact your application admin. 
+                <br/> Unauthorized!
                 </p>
             </div>
         </div>

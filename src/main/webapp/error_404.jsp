@@ -38,8 +38,8 @@
                 <p  class="grid_4" style="text-align: right; font-size: 52px;">404</p>
                 <p class="grid_7">
                 It seems that the page you've requested has not been found or has a broken link
-                please check the requested web page again or try again Later!! 
-                <br/> We are extremely sorry about the inconvenience for not finding the requested webpage, Please Do co-operate!! We wish you best
+                please check the requested web page again or try again later.
+                <br/> Page not found!
                 </p>
             </div>
         </div>

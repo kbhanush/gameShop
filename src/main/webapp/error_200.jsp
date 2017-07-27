@@ -39,10 +39,7 @@
                 </h1><hr/><br/>
                 <p  class="grid_4" style="text-align: right; font-size: 52px;">200</p>
                 <p class="grid_7">
-                We are extremely sorry about the inconvenience for not finding the requested webpage, Please Do co-operate!! We wish you best
-                but this server is under a maintainence, So 
-                You may ask the same webpage after some time or so
-                We will be back in no time!!
+                The webpage you requested is unavailable at this time. The server is under maintenance. Thank you for your cooperation.
                 </p>
             </div>
         </div>
