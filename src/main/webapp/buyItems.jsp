@@ -60,7 +60,7 @@
                         </div>
                         <div class="clear"></div><br/>
                         <div class="grid_2">
-                            Mobile No
+                            Cellphone #
                         </div>
                         <div class="grid_5">
                             <input type="text" class="mobile" maxlength="10" name="mobile" />
@@ -72,7 +72,7 @@
                             <textarea class="address"  name="address" required></textarea>    
                         </div>
                         <div class="grid_2">
-                            City
+                            Store Location
                         </div>  
                         
                         <%-- DBDevOps: Comment for enhancement --%>
