@@ -72,7 +72,7 @@
                             <textarea class="address"  name="address" required></textarea>    
                         </div>
                         <div class="grid_2">
-                            City
+                            Store Location
                         </div>  
                         
                         <%-- DBDevOps: Comment for enhancement --%>
