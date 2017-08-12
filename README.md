@@ -1,3 +1,2 @@
-#gamerentals.com 
-## To build
-clean install -Ddb.ip=140.86.33.194 -Ddb.name=PDB1.dbdevcs14.oraclecloud.internal -Ddb.user=webapp -Ddb.pass=webapp -Ddb.edition=ora$base
+#gameShop.com 
+## To build in Oracle developer cloud service, add each build step listed in build.sh to the maven build configuration on DevCS. Change database settings to point to your DB instance 
