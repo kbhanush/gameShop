@@ -19,10 +19,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 import user.user;
 
-/**
- *
- * @author chirag
- */
+
 public class registerServlet extends HttpServlet {
 
     /**

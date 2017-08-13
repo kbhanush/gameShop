@@ -10,10 +10,7 @@ import java.util.Scanner;
 
 import database.DBCSConnectionManager;
 
-/**
- *
- * @author chirag
- */
+
 public class user {
     public String userEmail = null;
     public String userId = null;

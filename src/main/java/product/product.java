@@ -12,10 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author chirag
- */
+
 public class product {
 
     private int productId; 

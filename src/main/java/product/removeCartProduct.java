@@ -19,10 +19,6 @@ import javax.servlet.http.HttpSession;
 
 
 
-/**
- *
- * @author Chirag
- */
 public class removeCartProduct extends HttpServlet {
 
     /**

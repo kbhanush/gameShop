@@ -4,10 +4,7 @@
  */
 package helpers;
 
-/**
- *
- * @author Chirag
- */
+
 public class StringSlasher {
     public void sqlSlasher (String sql){
         char arr [] = sql.toCharArray();

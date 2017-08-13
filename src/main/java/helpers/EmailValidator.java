@@ -6,10 +6,7 @@ package helpers;
 import java.util.Scanner;
 import java.util.regex.*;
 
-/**
- *
- * @author Chirag
- */
+
 public class EmailValidator {
     boolean result = false;
         private Pattern pattern;

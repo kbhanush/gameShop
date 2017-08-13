@@ -11,10 +11,7 @@ import java.util.*;
 import database.DBCSConnection;
 import database.DBCSConnectionManager;
 
-/**
- *
- * @author chirag
- */
+
 public class cart {
 
     public ArrayList<Integer> id = new ArrayList();

@@ -4,10 +4,6 @@
  */
 package product;
 
-/**
- *
- * @author chirag
- */
 public class productBean {
 
     public String getCompany() {
