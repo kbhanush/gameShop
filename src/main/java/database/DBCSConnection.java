@@ -37,7 +37,8 @@ public class DBCSConnection {
         dbIP = System.getProperty("dbIP");
         dbName = System.getProperty("dbName");
         dbEdition = System.getProperty("dbEdition");
-
+        setSource("system properties");
+        
         // If the system properties are not set, look to the OS environment...        
         if (dbUser == null || dbPass == null || dbIP == null || dbName == null || dbEdition == null) {
             System.out.println("[DB DEBUG] The database connection information wasn't provided via system properties - checking the environment.");
@@ -47,7 +48,7 @@ public class DBCSConnection {
             dbIP = (dbIP != null) ? dbIP : System.getenv("dbIP");
             dbName = (dbName != null) ? dbName : System.getenv("dbName");
             dbEdition = (dbEdition != null) ? dbEdition : System.getenv("dbEdition");
-            source = "OS environment";
+            setSource("OS environment");
         }
 
         // If the environment it not set, pull from a Maven generated properties file...
@@ -66,11 +67,12 @@ public class DBCSConnection {
                 dbIP = (dbIP != null) ? dbIP : dbProps.getProperty("databaseIP");
                 dbName = (dbName != null) ? dbName : dbProps.getProperty("databaseName");
                 dbEdition = (dbEdition != null) ? dbEdition : dbProps.getProperty("databaseEdition");
-                source = "Maven generated db.properties file";
+                setSource("Maven generated db.properties file");
             } catch (IOException e) {
                 System.out.println("[DB DEBUG] Error loading database connection info");
             }
         }
+                
         // If the environment it not set, pull from a application properties file...
         if (dbUser == null || dbPass == null || dbIP == null || dbName == null || dbEdition == null) {
             System.out.println("[DB DEBUG] The database connection information wasn't provided via system properties, the OS environment or the Maven generated properties file - reading from the application db.proerties file.");
@@ -87,7 +89,7 @@ public class DBCSConnection {
                 dbIP = (dbIP != null) ? dbIP : dbProps.getProperty("databaseIP");
                 dbName = (dbName != null) ? dbName : dbProps.getProperty("databaseName");
                 dbEdition = (dbEdition != null) ? dbEdition : dbProps.getProperty("databaseEdition");
-                source = "Application provided db.properties file";
+                setSource("application provided db.properties file");        
             } catch (IOException e) {
                 System.out.println("[DB DEBUG] Error loading database connection info");
             }
@@ -112,6 +114,14 @@ public class DBCSConnection {
         Statement editionStmt = _conn.createStatement();
         editionStmt.execute("alter session set edition=" + dbEdition);
 
+    }
+    
+    private void setSource(String source) {
+        
+        // If any of these have been set, consider it the primary source of connection information and skip the setting...
+        if (dbUser != null || dbPass != null || dbIP != null || dbName != null || dbEdition != null) {
+            source = source;
+        }            
     }
 
     public Connection getConnection() throws SQLException {
