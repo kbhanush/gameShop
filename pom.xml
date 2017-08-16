@@ -54,7 +54,7 @@
                             <goal>write-project-properties</goal>
                         </goals>
                         <configuration>
-                            <outputFile>${project.build.outputDirectory}/../CIDemo/db.properties</outputFile>
+                            <outputFile>target/CIDemo/db.properties</outputFile>
                         </configuration>
                     </execution>
                 </executions>
