@@ -14,19 +14,20 @@ import javax.servlet.ServletContext;
  * @author Arindam Bose
  */
 public class DBCSConnection {
-//Database Connection properties
+
 
     //Database Connection properties
     private String dbUser = null;
     private String dbPass = null;
     private String dbEdition = null;
-    static String dbIP = null;
-    static String dbName = null;
+    private String dbIP = null;
+    private String dbName = null;
+    private String source = "system properties";
 
     //DB Connection objects
     private Connection _conn;
     private final OracleDataSource _ords;
-    //private ServletContext _context;
+
 
     public DBCSConnection(ServletContext context) throws SQLException {
 
@@ -36,7 +37,6 @@ public class DBCSConnection {
         dbIP = System.getProperty("dbIP");
         dbName = System.getProperty("dbName");
         dbEdition = System.getProperty("dbEdition");
-        String source = "system properties";
 
         // If the system properties are not set, look to the OS environment...        
         if (dbUser == null || dbPass == null || dbIP == null || dbName == null || dbEdition == null) {
@@ -93,7 +93,7 @@ public class DBCSConnection {
             }
         }
 
-        System.out.println("[DB DEBUG] The database connection properties were read from the " + source);
+        System.out.println("[DB DEBUG] The following database connection properties were read from the " + source);
         System.out.println("[DB DEBUG] Database User:" + dbUser);
         System.out.println("[DB DEBUG] Database Password:" + dbPass);
         System.out.println("[DB DEBUG] Database IP:" + dbIP);
@@ -130,6 +130,84 @@ public class DBCSConnection {
 
     public boolean isActive() throws SQLException {
         return !_conn.isClosed();
+    }
+    
+
+    /**
+     * @return the dbUser
+     */
+    public String getDbUser() {
+        return dbUser;
+    }
+
+    /**
+     * @param dbUser the dbUser to set
+     */
+    public void setDbUser(String dbUser) {
+        this.dbUser = dbUser;
+    }
+
+    /**
+     * @return the dbPass
+     */
+    public String getDbPass() {
+        return dbPass;
+    }
+
+    /**
+     * @param dbPass the dbPass to set
+     */
+    public void setDbPass(String dbPass) {
+        this.dbPass = dbPass;
+    }
+
+    /**
+     * @return the dbEdition
+     */
+    public String getDbEdition() {
+        return dbEdition;
+    }
+
+    /**
+     * @param dbEdition the dbEdition to set
+     */
+    public void setDbEdition(String dbEdition) {
+        this.dbEdition = dbEdition;
+    }
+
+    /**
+     * @return the dbIP
+     */
+    public String getDbIP() {
+        return dbIP;
+    }
+
+    /**
+     * @param aDbIP the dbIP to set
+     */
+    public void setDbIP(String aDbIP) {
+        dbIP = aDbIP;
+    }
+
+    /**
+     * @return the dbName
+     */
+    public String getDbName() {
+        return dbName;
+    }
+
+    /**
+     * @param aDbName the dbName to set
+     */
+    public void setDbName(String aDbName) {
+        dbName = aDbName;
+    }    
+
+    /**
+     * @return the source of the database connection information
+     */
+    public String getSource() {
+        return source;
     }
 
 }

@@ -1,6 +1,9 @@
 
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="database.DBCSConnection"%>
+<%@ page import="database.DBCSConnectionManager" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,10 +47,23 @@
         <div class="container_16">
             <div id="whiteBox" class="grid_16" style="padding: 10px;">
                 <div class="push_1">
+                    <h3>About</h3>
                     <p>This application exists to demonstrate how Continuous Integration and Continuous Deployment (CI/CD) can include the database tier. </p>
                 </div> 
                 <div class="push_1">
-                    <p>Version 0.1</p>
+                    <h3>Database Information</h3>
+                    <p>
+                        Set via: <%= DBCSConnectionManager.getConnection().getSource() %><br/>
+                        User: <%= DBCSConnectionManager.getConnection().getDbUser()%><br/>
+                        Name: <%= DBCSConnectionManager.getConnection().getDbName()%><br/>
+                        IP: <%= DBCSConnectionManager.getConnection().getDbIP()%><br/><br/>
+                    </p>
+                </div> 
+                <div class="push_1">
+                    <h3>Version History</h3>
+                    <p>
+                        17-08-16.01 - Created this page :-)<br/>
+                    </p>
                 </div> 
             </div>
         </div>
