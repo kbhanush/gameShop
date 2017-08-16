@@ -38,7 +38,7 @@
         <databaseName>${db.name}</databaseName>
         <databaseUser>${db.user}</databaseUser>
         <databasePassword>${db.pass}</databasePassword>
-        <databaseEdition>${db.edition}</databaseEdition>
+        <databaseEdition>ora$base</databaseEdition>
     </properties>
     <build>
         <finalName>CIDemo</finalName>
@@ -54,7 +54,7 @@
                             <goal>write-project-properties</goal>
                         </goals>
                         <configuration>
-                            <outputFile>${project.build.outputDirectory}/db.properties</outputFile>
+                            <outputFile>${project.build.outputDirectory}/../CIDemo/db.properties</outputFile>
                         </configuration>
                     </execution>
                 </executions>
