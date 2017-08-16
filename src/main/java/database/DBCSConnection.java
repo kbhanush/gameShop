@@ -22,7 +22,7 @@ public class DBCSConnection {
     private String dbEdition = null;
     private String dbIP = null;
     private String dbName = null;
-    private String source = "system properties";
+    private String source = null;
 
     //DB Connection objects
     private Connection _conn;
