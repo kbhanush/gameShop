@@ -118,8 +118,10 @@ public class DBCSConnection {
     
     private void setSource(String source) {
         
-        // If any of these have been set, consider it the primary source of connection information and skip the setting...
-        if (dbUser != null || dbPass != null || dbIP != null || dbName != null || dbEdition != null) {
+        // If any of these have been set, consider it the primary source of 
+        // connection information and skip the setting, ignoring dbEdition, 
+        // because the $ makes it tricky to set.
+        if (dbUser != null || dbPass != null || dbIP != null || dbName != null) {
             source = source;
         }            
     }
