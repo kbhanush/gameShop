@@ -41,7 +41,7 @@ public class DBCSConnection {
         
         // If the system properties are not set, look to the OS environment...        
         if (dbUser == null || dbPass == null || dbIP == null || dbName == null || dbEdition == null) {
-            System.out.println("[DB DEBUG] The database connection information wasn't provided via system properties - checking the environment.");
+            System.out.println("[DB DEBUG] The database connection information wasn't provided via system properties - checking the OS environment.");
             // This will allow an individual system property to override the properties file...
             dbUser = (dbUser != null) ? dbUser : System.getenv("dbUser");
             dbPass = (dbPass != null) ? dbPass : System.getenv("dbPass");
@@ -95,12 +95,14 @@ public class DBCSConnection {
             }
         }
 
+        /*
         System.out.println("[DB DEBUG] The following database connection properties were read from the " + source);
         System.out.println("[DB DEBUG] Database User:" + dbUser);
         System.out.println("[DB DEBUG] Database Password:" + dbPass);
         System.out.println("[DB DEBUG] Database IP:" + dbIP);
         System.out.println("[DB DEBUG] Database Name:" + dbName);
         System.out.println("[DB DEBUG] Database Edition: " + dbEdition);
+        */
 
         String connURL = "jdbc:oracle:thin:@//" + dbIP + ":1521/" + dbName;
         //Create Data Source
@@ -117,6 +119,13 @@ public class DBCSConnection {
     }
     
     private void setSource(String source) {
+        
+        System.out.println("[DB DEBUG] The following are the database connection properties after reading from the " + source);
+        System.out.println("[DB DEBUG] Database User:" + dbUser);
+        System.out.println("[DB DEBUG] Database Password:" + dbPass);
+        System.out.println("[DB DEBUG] Database IP:" + dbIP);
+        System.out.println("[DB DEBUG] Database Name:" + dbName);
+        System.out.println("[DB DEBUG] Database Edition: " + dbEdition);
         
         // If any of these have been set, consider it the primary source of 
         // connection information and skip the setting, ignoring dbEdition, 
