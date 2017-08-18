@@ -35,8 +35,8 @@
                 hitsCount = 1;
             } else {
                 /* Return visit */
-                System.out.println("Return visit");
                 hitsCount++;
+                System.out.println("Return visit number " + hitsCount);
             }
             application.setAttribute("hitCounter", hitsCount);
         %>
