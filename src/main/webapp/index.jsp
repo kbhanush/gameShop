@@ -56,7 +56,7 @@
 
         <%
             System.out.println("request.getMethod() = " + request.getMethod());
-            if (!request.getMethod().equals("HEAD")) {
+            if (request.getMethod().equals("HEAD")) {
                 // OTD does a regular health check on the app by doing a HEAD request on the root URL. 
                 // We want to ignore these requests.
                 System.out.println("Ignoring OTD health check HEAD request.");
