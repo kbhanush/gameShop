@@ -31,17 +31,17 @@
             Integer hitsCount = (Integer) application.getAttribute("hitCounter");
             if (hitsCount == null || hitsCount == 0) {
                 /* First visit */
-                System.out.println("First fisit");
                 hitsCount = 1;
+                System.out.println("Visit number " + hitsCount + " from " + request.getRemoteAddr());
             } else {
                 /* Return visit */
                 hitsCount++;
-                System.out.println("Return visit number " + hitsCount);
+                System.out.println("Visit number " + hitsCount + " from " + request.getRemoteAddr());
             }
             application.setAttribute("hitCounter", hitsCount);
         %>
 
-        <%            if (session.getAttribute("src/main/java/user") == null) {// New user, show join now
+        <%  if (session.getAttribute("src/main/java/user") == null) {// New user, show join now
                 System.out.println("[DEBUG INFO] User NOT logged in");
         %>
         <jsp:include page="includesPage/_joinNow.jsp"></jsp:include>
@@ -103,35 +103,38 @@
         <div class="container_16">
             <div id = "contents">
                 <!-- LeftSide -->
-                <%
-                    Connection c = DBCSConnectionManager.getConnection().getConnection();
-                    Statement st = c.createStatement();
-                    String getCategory = "SELECT * FROM category";
+                <% if (request.getRemoteAddr().substring(0, 3) == "10.0") {
+                        System.out.println("Ignoring request from internal ACCS IP " + request.getRemoteAddr());
+                    } else {
+                        Connection c = DBCSConnectionManager.getConnection().getConnection();
+                        Statement st = c.createStatement();
+                        String getCategory = "SELECT * FROM category";
 
-                    ResultSet rs = st.executeQuery(getCategory);
+                        ResultSet rs = st.executeQuery(getCategory);
                 %>
-                <div id="leftside" class="grid_3">
-                    <div>
-                        <ul id="leftsideNav">
-                            <li><a href="#"><strong>Categories</strong></a></li>
+                        <div id="leftside" class="grid_3">
+                            <div>
+                                <ul id="leftsideNav">
+                                    <li><a href="#"><strong>Categories</strong></a></li>
 
-                            <%
-                                while (rs.next()) {
-                                    String category = rs.getString("category_name");
-                            %>
-                            <li><a href="viewProducts_.jsp?cat=<%= category%>"><%= category%></a></li>
-                                <%
-                                    }
-                                %>
+                                    <%
+                                        while (rs.next()) {
+                                            String category = rs.getString("category_name");
+                                    %>
+                                    <li><a href="viewProducts_.jsp?cat=<%= category%>"><%= category%></a></li>
+                                        <%
+                                            }
+                                        %>
 
-                        </ul>
-                    </div>
-                    <div class="adv">
-                        <h2><br/>Advertise your product here</h2>
-                        <p>Sponsor ads will appear in this section</p>
-                        Total number of visits: <%= hitsCount%>
-                    </div>
-                </div>
+                                </ul>
+                            </div>
+                            <div class="adv">
+                                <h2><br/>Advertise your product here</h2>
+                                <p>Sponsor ads will appear in this section</p>
+                                Total number of visits: <%= hitsCount%>
+                            </div>
+                        </div>
+                <%}%>
             </div>
 
             <!-- Middle -->
