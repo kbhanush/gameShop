@@ -103,7 +103,7 @@
         <div class="container_16">
             <div id = "contents">
                 <!-- LeftSide -->
-                <% if (request.getRemoteAddr().substring(0, 3) == "10.0") {
+                <% if (request.getRemoteAddr().substring(0, 3).equals("10.0")) {
                         System.out.println("Ignoring request from internal ACCS IP " + request.getRemoteAddr());
                     } else {
                         Connection c = DBCSConnectionManager.getConnection().getConnection();
