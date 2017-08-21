@@ -54,6 +54,12 @@
             }
         %>
 
+        <%
+            System.out.println("request.getRemoteAddr first octet = " + request.getRemoteAddr().substring(0, 3));
+            if (request.getRemoteAddr().substring(0, 3).equals("10.")) {
+                System.out.println("Ignoring request from internal ACCS IP " + request.getRemoteAddr());
+            } else {
+        %>
         <div id = "banner">
             <div class="container_16">
                 <div class="grid_16" style="padding-left: 20px; " id="slider">	
@@ -102,39 +108,36 @@
 
         <div class="container_16">
             <div id = "contents">
-                <!-- LeftSide -->
-                <% if (request.getRemoteAddr().substring(0, 3).equals("10.0")) {
-                        System.out.println("Ignoring request from internal ACCS IP " + request.getRemoteAddr());
-                    } else {
-                        Connection c = DBCSConnectionManager.getConnection().getConnection();
-                        Statement st = c.createStatement();
-                        String getCategory = "SELECT * FROM category";
+                <!-- LeftSide -->                
+                <%
+                    Connection c = DBCSConnectionManager.getConnection().getConnection();
+                    Statement st = c.createStatement();
+                    String getCategory = "SELECT * FROM category";
 
-                        ResultSet rs = st.executeQuery(getCategory);
+                    ResultSet rs = st.executeQuery(getCategory);
                 %>
-                        <div id="leftside" class="grid_3">
-                            <div>
-                                <ul id="leftsideNav">
-                                    <li><a href="#"><strong>Categories</strong></a></li>
+                <div id="leftside" class="grid_3">
+                    <div>
+                        <ul id="leftsideNav">
+                            <li><a href="#"><strong>Categories</strong></a></li>
 
-                                    <%
-                                        while (rs.next()) {
-                                            String category = rs.getString("category_name");
-                                    %>
-                                    <li><a href="viewProducts_.jsp?cat=<%= category%>"><%= category%></a></li>
-                                        <%
-                                            }
-                                        %>
+                            <%
+                                while (rs.next()) {
+                                    String category = rs.getString("category_name");
+                            %>
+                            <li><a href="viewProducts_.jsp?cat=<%= category%>"><%= category%></a></li>
+                                <%
+                                    }
+                                %>
 
-                                </ul>
-                            </div>
-                            <div class="adv">
-                                <h2><br/>Advertise your product here</h2>
-                                <p>Sponsor ads will appear in this section</p>
-                                Total number of visits: <%= hitsCount%>
-                            </div>
-                        </div>
-                <%}%>
+                        </ul>
+                    </div>
+                    <div class="adv">
+                        <h2><br/>Advertise your product here</h2>
+                        <p>Sponsor ads will appear in this section</p>
+                        Total number of visits: <%= hitsCount%>
+                    </div>
+                </div>
             </div>
 
             <!-- Middle -->
@@ -146,6 +149,7 @@
             <!--The Center Content Div Closing -->
 
         <jsp:include page="includesPage/_footer.jsp"></jsp:include>
+        <%} // End else (not internal ACCS IP)%> 
 
     </body>
 </html>
