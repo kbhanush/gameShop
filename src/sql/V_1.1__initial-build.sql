@@ -15,12 +15,12 @@
 --  DDL for Sequence SEQ1
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "SEQ1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 50 CACHE 20 NOORDER  NOCYCLE  NOPARTITION ;
+   CREATE SEQUENCE  "SEQ1"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 50;
 --------------------------------------------------------
 --  DDL for Sequence USER_SEQ
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "USER_SEQ"  MINVALUE 100 MAXVALUE 1000 INCREMENT BY 1 START WITH 105 CACHE 20 NOORDER  NOCYCLE  NOPARTITION ;
+   CREATE SEQUENCE  "USER_SEQ"  MINVALUE 100 MAXVALUE 1000 INCREMENT BY 1 START WITH 105;
 --------------------------------------------------------
 --  DDL for Table ADMINISTRATORS
 --------------------------------------------------------
