@@ -6,7 +6,7 @@
     <artifactId>ECommerceCIDemo</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>CIDemo Maven Webapp</name>
+    <name>CIDemo Maven Webapp - usoracle52544 </name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
