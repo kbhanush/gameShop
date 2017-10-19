@@ -134,10 +134,10 @@ public class buyItems extends HttpServlet {
                     insertOrder = "BEGIN"
                             
                             // DBDevOps: Comment for enhancment
-                            // + "  add_order(?, ?, ?, ?, ?, ?);"
+                            + "  add_order(?, ?, ?, ?, ?, ?);"
                             
                             // DBDevOps: Uncomment for enhancment
-                            + "  add_order(?, ?, ?, ?, ?, ?, ?);"
+                            // + "  add_order(?, ?, ?, ?, ?, ?, ?);"
                             
                             + "  END;";
 
@@ -158,7 +158,7 @@ public class buyItems extends HttpServlet {
                     preparedSQL1.setDouble(6, Cart.getTotalPriceOfCart()); //`total_order_price``
 
                     // DBDevOps: Uncomment for enhancment
-                     preparedSQL1.setInt(7, Integer.parseInt(location));
+                    // preparedSQL1.setInt(7, Integer.parseInt(location));
 
                     res = preparedSQL1.executeUpdate();
 
