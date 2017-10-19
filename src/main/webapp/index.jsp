@@ -72,10 +72,13 @@
 //                // OTD does a regular health check on the app by doing a HEAD request on the root URL. 
 //                // We want to ignore these requests.
 //                System.out.println("Ignoring OTD health check HEAD request.");
-            System.out.println("request.getRemoteAddr first octet = " + request.getRemoteAddr().substring(0, 3));
-            if (request.getRemoteAddr().substring(0, 3).equals("10X.")) { // || request.getRemoteAddr().substring(0, 3).equals("100")) {
-                System.out.println("Ignoring request from internal ACCS IP " + request.getRemoteAddr());
+           
+            // Skip requests from OTD health check (no user-agent header)...
+            String userAgent = request.getHeader("user-agent");            
+            if (userAgent == null) {
+                System.out.println("Ignoring OTD health check request");
             } else {
+
         %>
         <div id = "banner">
             <div class="container_16">
