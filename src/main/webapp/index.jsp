@@ -62,7 +62,7 @@
 //                // We want to ignore these requests.
 //                System.out.println("Ignoring OTD health check HEAD request.");
             System.out.println("request.getRemoteAddr first octet = " + request.getRemoteAddr().substring(0, 3));
-            if (request.getRemoteAddr().substring(0, 3).equals("10.")) { // || request.getRemoteAddr().substring(0, 3).equals("100")) {
+            if (request.getRemoteAddr().substring(0, 3).equals("10X.")) { // || request.getRemoteAddr().substring(0, 3).equals("100")) {
                 System.out.println("Ignoring request from internal ACCS IP " + request.getRemoteAddr());
             } else {
         %>
