@@ -57,16 +57,16 @@
 
         <%
             // Log Headers received to see if health check sends something unique...
-            System.out.println("\n** Logging headers:");
+            /*System.out.println("\n** Logging headers:");
             Enumeration enumeration = request.getHeaderNames();
             while (enumeration.hasMoreElements()) {
                 String name = (String) enumeration.nextElement();
                 String value = request.getHeader(name);
                 System.out.println(name + " = " + value);
             }
-            System.out.println("** Header logging complete\n");
+            System.out.println("** Header logging complete\n");*/
             
-            System.out.println("request.getMethod() = " + request.getMethod());
+            //System.out.println("request.getMethod() = " + request.getMethod());
 // It appears the OTD health check is a GET request...
 //            if (request.getMethod().equals("HEAD")) {
 //                // OTD does a regular health check on the app by doing a HEAD request on the root URL. 
